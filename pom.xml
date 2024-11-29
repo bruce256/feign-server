@@ -12,6 +12,7 @@
     <modules>
         <module>feign-api</module>
         <module>feign-service</module>
+        <module>gateway</module>
     </modules>
 
     <properties>
