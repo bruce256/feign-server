@@ -11,6 +11,14 @@ spring:
           uri: https://blog.csdn.net/bruce128?type=blog # 路由到的目标地址
           predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
             - Path=/blog
+            - Header=agentId,1
+          filters:
+            - StripPrefix=1
+        - id: yudaoyuanma2 # 路由的编号
+          uri: https://bing.com # 路由到的目标地址
+          predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
+            - Path=/blog
+            - Header=agentId,2
           filters:
             - StripPrefix=1
         - id: oschina # 路由的编号
